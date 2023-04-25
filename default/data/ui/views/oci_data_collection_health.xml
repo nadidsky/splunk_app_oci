@@ -14,7 +14,7 @@
       <single>
         <title>Event count by type</title>
         <search>
-          <query>|tstats count where `oci_index` by sourcetype|eval type=sourcetype | sort - count</query>
+          <query>|tstats count where `oci_index` `oci-st` by sourcetype|eval type=sourcetype | sort - count</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
@@ -32,7 +32,7 @@
       <single>
         <title>Flow Log Event Count Trends</title>
         <search>
-          <query>|tstats count where `oci_index` AND sourcetype=oci:com.oraclecloud.vcn* by _time,sourcetype|eval type=sourcetype | timechart sum(count) as count by type</query>
+          <query>|tstats count where `oci_index` `oci-st` AND sourcetype=oci:com.oraclecloud.vcn* by _time,sourcetype|eval type=sourcetype | timechart sum(count) as count by type</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
