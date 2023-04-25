@@ -11,22 +11,22 @@
   </fieldset>
   <row>
     <panel>
-      <single>
+      <table>
         <title>Event count by type</title>
         <search>
-          <query>|tstats count where `oci_index` `oci-st` by sourcetype|eval type=sourcetype | sort - count</query>
+          <query>| tstats count where `oci_index` `oci-st` by sourcetype 
+| eval type=sourcetype 
+| sort - count</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
-        <option name="colorMode">block</option>
         <option name="drilldown">none</option>
-        <option name="height">360</option>
-        <option name="rangeColors">["0x555","0x006d9c","0x53a051"]</option>
-        <option name="rangeValues">[100,5000]</option>
         <option name="refresh.display">progressbar</option>
-        <option name="trellis.enabled">1</option>
-        <option name="useColors">1</option>
-      </single>
+        <format type="color" field="count">
+          <colorPalette type="minMidMax" maxColor="#118832" minColor="#FFFFFF"></colorPalette>
+          <scale type="minMidMax"></scale>
+        </format>
+      </table>
     </panel>
     <panel>
       <single>
@@ -46,17 +46,21 @@
   </row>
   <row>
     <panel>
-      <table>
+      <chart>
         <title>OCI Streaming TA Errors</title>
         <search>
           <query>index=_internal OCI ERROR NOT sourcetype IN ( splunkd_access,splunk_web_access,splunkd_remote_searches,splunkd_ui_access ) AND NOT (sourcetype=scheduler AND log_level=INFO)  | timechart count| sort -_time</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
+        <option name="charting.chart">column</option>
+        <option name="charting.chart.stackMode">stacked</option>
+        <option name="charting.drilldown">all</option>
+        <option name="height">250</option>
         <drilldown>
-          <link target="_blank">search?q=index%3D_internal%20OCI%20ERROR&amp;earliest=$timerange.earliest$&amp;latest=$timerange.latest$</link>
+          <link target="_blank">search?q=index%3D_internal%20OCI%20ERROR%20NOT%20sourcetype%20IN%20(%20splunkd_access%2Csplunk_web_access%2Csplunkd_remote_searches%2Csplunkd_ui_access%20)%20AND%20NOT%20(sourcetype%3Dscheduler%20AND%20log_level%3DINFO)&amp;earliest=$timerange.earliest$&amp;latest=$timerange.latest$</link>
         </drilldown>
-      </table>
+      </chart>
     </panel>
   </row>
 </form>
