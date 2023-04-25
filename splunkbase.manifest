@@ -1,0 +1,195 @@
+{
+  "version": "1.0",
+  "date": "2023-01-20T12:54:47.901921905Z",
+  "hashAlgorithm": "SHA-256",
+  "app": {
+    "id": 5289,
+    "version": "2.1.2",
+    "files": [
+      {
+        "path": "README.txt",
+        "hash": "45cec3ecc86d3b05b7c8cc01cbd9bbaab9718b86eef4a0e5741182de1e64f086"
+      },
+      {
+        "path": "metadata/default.meta",
+        "hash": "957c594f988b95717e56f7c38672b1fdc6c4d5c9cfa42da58fb98d92b9febc13"
+      },
+      {
+        "path": "static/appIcon.png",
+        "hash": "ac7ceb82096852342a4bee8cefc16d5243b9592b18ba89fa62b410f9e7c5000e"
+      },
+      {
+        "path": "static/appIcon_2x.png",
+        "hash": "c99848fa6b7cb767d3ecd8dc036d9081eb9e892ed8f5a7103e8069e2a2356e44"
+      },
+      {
+        "path": "static/appIconAlt.png",
+        "hash": "ac7ceb82096852342a4bee8cefc16d5243b9592b18ba89fa62b410f9e7c5000e"
+      },
+      {
+        "path": "static/appIconAlt_2x.png",
+        "hash": "c99848fa6b7cb767d3ecd8dc036d9081eb9e892ed8f5a7103e8069e2a2356e44"
+      },
+      {
+        "path": "default/app.conf",
+        "hash": "7fc1094a4da32231857a8074ee3efd0d85669a6e3bc8272697105b6fe55d4d9c"
+      },
+      {
+        "path": "default/savedsearches.conf",
+        "hash": "ee314286de4248570ac17c5c7b831ae6db58c94ceb12527c8ee70ef3d550a634"
+      },
+      {
+        "path": "default/props.conf",
+        "hash": "db3511c82f84faf959b67a6cf921a950ba089a8a0a06bda1bb1bc2798099d189"
+      },
+      {
+        "path": "default/addon_builder.conf",
+        "hash": "f53ecdfa76e4becef704f206918ce6826fa9b013ab608b3527ece026a1b73579"
+      },
+      {
+        "path": "default/macros.conf",
+        "hash": "3dc7e13f1b888ce461626b189feac6bc65c7081d055f27f73e67c82e10d66c27"
+      },
+      {
+        "path": "default/transforms.conf",
+        "hash": "0e5a2dde36b4a5d5301859582a0ee0306dcadbf4489a689dae00a001410d1af0"
+      },
+      {
+        "path": "default/data/ui/views/oci_load_balancers.xml",
+        "hash": "57cd294e09901e85a8d09770068edbe45babe06c28f7b72bd5b87486c3056dc1"
+      },
+      {
+        "path": "default/data/ui/views/vcn_flow_logs__security_analysis.xml",
+        "hash": "59b4f458718de4038e40df79f9b6e4b6b70a5f1e6920903f333114aec92655da"
+      },
+      {
+        "path": "default/data/ui/views/oci_audit_overview.xml",
+        "hash": "0f75ba63fa3cf21e5958b73de02968c84a167feeeb3977670db85c86b432c15b"
+      },
+      {
+        "path": "default/data/ui/views/oci_function_logs.xml",
+        "hash": "f2d67d82aa77a4c5176e028b9d96664883bceeb7d96efda456f5d4f048e66703"
+      },
+      {
+        "path": "default/data/ui/views/vcn_flow_logs__traffic_analysis.xml",
+        "hash": "46a69c2aefc23da5fd660155b686d38bdaf8059af0cf16beba97730a5d8e8451"
+      },
+      {
+        "path": "default/data/ui/views/waf_traffic_analysis.xml",
+        "hash": "022c4a0aba06b8b87a5b1b1d77e3d9ed383020456b4f0917c8a790e7983353d0"
+      },
+      {
+        "path": "default/data/ui/views/oci_data_collection_health.xml",
+        "hash": "177f28b063b531e9c671edfb6173df0b9fec8b4312cf12b5748fe9d764f47506"
+      },
+      {
+        "path": "default/data/ui/views/README",
+        "hash": "4ccd9dc2dca5bd634f7c07ad1749e4e63a7969c84e2eff83517256f7c884cd29"
+      },
+      {
+        "path": "default/data/ui/views/oci_audit_activity.xml",
+        "hash": "f091f3cb090b4177269fd6734e0763f7a56f21decb14897055cdc5530f4e3d69"
+      },
+      {
+        "path": "default/data/ui/views/oci_load_balancers_useragent_analysis.xml",
+        "hash": "34aa2595a9a0fa3376c5dbfc9a2f4d927417112dbb8650955dc38d2a1b8b42d8"
+      },
+      {
+        "path": "default/data/ui/views/oci_cloudguard_detection_events.xml",
+        "hash": "f38b11cd2c210a26a4a6d185eea30232eacfb06d658e227b28cb588d9ae40e97"
+      },
+      {
+        "path": "default/data/ui/views/oci_objectstore_activity.xml",
+        "hash": "34c60962be1f56686fa019a467e1c2e4730ac71dd35ad76120ea8375f6b8ec35"
+      },
+      {
+        "path": "default/data/ui/nav/default.xml",
+        "hash": "226292b601232aa28d1e916cb84401d4db0f125930f5d3b5556bcc8acc891096"
+      },
+      {
+        "path": "bin/README",
+        "hash": "597cdad620bec4e52e0e8adc3cad99de9b3ce45da0dd18e4159e1009c976e957"
+      },
+      {
+        "path": "lookups/oci_lbs.csv",
+        "hash": "edd2bf82a80eb12aa0c77dece45a81f88e82a655afd4eec681ee7c02dad2093f"
+      },
+      {
+        "path": "lookups/oci_vcn_ids.csv",
+        "hash": "597d8aae999678b752ecb364566f746626a3f61fc016157818fb90691fbc9f9b"
+      },
+      {
+        "path": "lookups/well_known_ports.csv",
+        "hash": "db6983a8d6e467599a990c35a95acbfd240696ce18d51e439060f691d9b829bd"
+      },
+      {
+        "path": "lookups/oci_services.csv",
+        "hash": "1d6855458aa4fa69b043e35cb12209de63cb4702e85c2974bcbaa57a712f4dbc"
+      },
+      {
+        "path": "lookups/all_detectors.csv",
+        "hash": "ac6bfc1ac78befb652d107e7a7eb688c6540c9d2cadd27e861573918a306d939"
+      },
+      {
+        "path": "lookups/sg_ports.csv",
+        "hash": "c92bece53c2ee05040ae11bd2738c95b17cc6dcaf878e4a42db5a8e82b0cfc76"
+      },
+      {
+        "path": "lookups/all_responders.csv",
+        "hash": "ff173cc0972f334f15ba99160a24f7bc43ff909b40b07f0c2fb2a62232667030"
+      }
+    ]
+  },
+  "products": [
+    {
+      "platform": "splunk",
+      "product": "enterprise",
+      "versions": [
+        "7.0",
+        "7.1",
+        "7.2",
+        "7.3",
+        "8.0",
+        "8.1",
+        "8.2",
+        "9.0"
+      ],
+      "architectures": [
+        "x86_64"
+      ],
+      "operatingSystems": [
+        "windows",
+        "linux",
+        "macos",
+        "freebsd",
+        "solaris",
+        "aix"
+      ]
+    },
+    {
+      "platform": "splunk",
+      "product": "cloud",
+      "versions": [
+        "7.0",
+        "7.1",
+        "7.2",
+        "7.3",
+        "8.0",
+        "8.1",
+        "8.2",
+        "9.0"
+      ],
+      "architectures": [
+        "x86_64"
+      ],
+      "operatingSystems": [
+        "windows",
+        "linux",
+        "macos",
+        "freebsd",
+        "solaris",
+        "aix"
+      ]
+    }
+  ]
+}
