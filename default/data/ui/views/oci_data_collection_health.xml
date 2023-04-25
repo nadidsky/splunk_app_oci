@@ -14,7 +14,6 @@
       <single>
         <title>Event count by type</title>
         <search>
-          <query>`oci_index`  | stats count by type | sort -count</query>
           <query>|tstats count where `oci_index` by sourcetype|eval type=sourcetype | sort - count</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
