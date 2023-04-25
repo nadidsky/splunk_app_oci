@@ -14,7 +14,8 @@
       <single>
         <title>Event count by type</title>
         <search>
-          <query>index="oci_index" | stats count by type | sort -count</query>
+          <query>`oci_index`  | stats count by type | sort -count</query>
+          <query>|tstats count where `oci_index` by sourcetype|eval type=sourcetype | sort - count</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
@@ -32,7 +33,7 @@
       <single>
         <title>Flow Log Event Count Trends</title>
         <search>
-          <query>index="oci_index" AND type=com.oraclecloud.vcn* | stats count by _time, type | timechart sum(count) as count by type</query>
+          <query>|tstats count where `oci_index` AND sourcetype=oci:com.oraclecloud.vcn* by _time,sourcetype|eval type=sourcetype | timechart sum(count) as count by type</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
@@ -49,14 +50,13 @@
       <table>
         <title>OCI Streaming TA Errors</title>
         <search>
-          <query>index=_internal OCI ERROR | timechart count| sort -_time</query>
+          <query>index=_internal OCI ERROR NOT sourcetype IN ( splunkd_access,splunk_web_access,splunkd_remote_searches,splunkd_ui_access ) AND NOT (sourcetype=scheduler AND log_level=INFO)  | timechart count| sort -_time</query>
           <earliest>$timerange.earliest$</earliest>
           <latest>$timerange.latest$</latest>
         </search>
         <drilldown>
           <link target="_blank">search?q=index%3D_internal%20OCI%20ERROR&amp;earliest=$timerange.earliest$&amp;latest=$timerange.latest$</link>
         </drilldown>
-
       </table>
     </panel>
   </row>
